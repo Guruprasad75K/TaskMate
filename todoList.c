@@ -22,7 +22,8 @@ int daysRemaining(int deadline[3]) {
 
     time_t deadlineTime = mktime(&deadlineDate);
     time_t todayTime = mktime(today);
-
+    
+    // Calculate the difference in seconds, then convert to days
     double diff = difftime(deadlineTime, todayTime);
     int days = diff / (60 * 60 * 24);
 
