@@ -11,6 +11,7 @@ struct todo {
 };
 
 int daysRemaining(int deadline[3]) {
+    // Get the current date
     time_t now = time(NULL);
     struct tm *today = localtime(&now);
 
