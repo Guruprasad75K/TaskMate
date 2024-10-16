@@ -20,6 +20,7 @@ int daysRemaining(int deadline[3]) {
     deadlineDate.tm_mon = deadline[1] - 1; 
     deadlineDate.tm_year = deadline[2] - 1900; 
 
+    // Convert both dates to time_t
     time_t deadlineTime = mktime(&deadlineDate);
     time_t todayTime = mktime(today);
     
